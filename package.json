@@ -3,8 +3,10 @@
   "description": "Fastify plugin with light DDD approach",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "plcgi1",
+  "author": "Aliaksandr <plcgi1@gmail.com>",
+  "keywords": ["ddd", "fastify", "fastify-plugin"],
   "repository": "git@github.com:plcgi1/fastify-light-ddd.git",
+  "homepage": "https://github.com/plcgi1/fastify-light-ddd",
   "scripts": {
     "start": "node  index.js",
     "prettier": "prettier './**/*.js'",
