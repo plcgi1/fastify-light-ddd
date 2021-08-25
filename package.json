@@ -1,0 +1,27 @@
+{
+  "name": "fastify-light-ddd",
+  "description": "Fastify plugin with light DDD approach",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node  index.js",
+    "prettier": "prettier './**/*.js'",
+    "prettier:check": "yarn prettier --check",
+    "prettier:fix": "yarn prettier --write",
+    "lint:js:fix": "eslint . --fix",
+    "lint:fix": "yarn lint:js:fix && yarn prettier:fix",
+    "test": "NODE_ENV=test node test/index.js"
+  },
+  "dependencies": {
+    "fastify-plugin": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "fastify": "^3.20.2",
+    "prettier": "^2.3.2",
+    "tap": "^15.0.9"
+  }
+}
