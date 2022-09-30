@@ -6,6 +6,7 @@
   "author": "Aliaksandr <plcgi1@gmail.com>",
   "keywords": ["ddd", "fastify", "fastify-plugin"],
   "repository": "git@github.com:plcgi1/fastify-light-ddd.git",
+  "main": "index.js",
   "homepage": "https://github.com/plcgi1/fastify-light-ddd",
   "scripts": {
     "start": "node  index.js",
