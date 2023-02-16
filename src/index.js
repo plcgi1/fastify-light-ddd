@@ -67,13 +67,9 @@ const createMailers = (app, regExp, rootPath) => {
   walk(path.resolve(rootPath))
     .filter((fullFileName) => regExp.test(fullFileName))
     .map((fullfilename) => {
-      const parts = fullfilename.split('/')
-
       const filename = path.basename(fullfilename)
 
-      const requirePath = `${mailersPath}/${parts[parts.length - 3]}/mailers/${filename}`
-
-      const Mailer = require(path.resolve(requirePath))
+      const Mailer = require(path.resolve(fullfilename))
 
       const mailer = new Mailer()
 

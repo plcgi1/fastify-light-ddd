@@ -1,5 +1,5 @@
 const fastify = require('fastify')
-const fastifyLightDDD = require('../..')
+const fastifyLightDDD = require('../../src')
 const descriptor = require('./app/descriptor')
 
 function build() {

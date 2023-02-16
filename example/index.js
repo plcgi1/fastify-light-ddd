@@ -1,6 +1,5 @@
 const app = require('./src/app')
-
-const port = 8080
+const { port } = require('./config/environment')
 
 const start = async () => {
   let server
