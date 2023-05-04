@@ -1,4 +1,3 @@
-/* test */
 const fp = require('fastify-plugin')
 const path = require('path')
 const fs = require('fs')
@@ -25,6 +24,10 @@ function walk(dir) {
     }
   })
   return results
+}
+
+const versionHandler = async (packageInfo) => {
+  return { version: packageInfo.version, name: packageInfo.name }
 }
 
 async function createServices(app, regExp, rootPath) {
@@ -105,11 +108,15 @@ const createControllers = (app, controllers, rootPath) => {
 
     interfaces.forEach((interfaceT) => {
       let prehandlers = []
+      let prevalidators = []
 
       if (interfaceT.preHandler) {
         prehandlers = interfaceT.preHandler.map((prehandler) => {
           return prehandler(app, controller)
         })
+      }
+      if (interfaceT.preValidation) {
+        prevalidators = interfaceT.preValidation
       }
       if (!schemas[interfaceT.controllerMethod]) {
         schemas[interfaceT.controllerMethod] = {}
@@ -126,6 +133,7 @@ const createControllers = (app, controllers, rootPath) => {
         interfaceT.path,
         {
           preHandler: prehandlers,
+          preValidation: prevalidators,
           schema: schemas[interfaceT.controllerMethod],
         },
         (req, reply) => {
@@ -155,6 +163,10 @@ const init = async (fastify, config, done) => {
   createControllers(fastify, controllers, rootPath)
 
   createMailers(fastify, new RegExp(/mailers/), rootPath)
+
+  if (config.packageInfo) {
+    fastify.get('/api/version', () => { return versionHandler(config.packageInfo)})
+  }
 
   done()
 }
