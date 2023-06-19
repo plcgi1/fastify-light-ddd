@@ -98,7 +98,7 @@ const createControllers = (app, controllers, rootPath) => {
     const controllerPath = `${rootPath}/${controllerData.path}`
     const Controller = require(path.resolve(controllerPath))
 
-    const controller = new Controller()
+    const controller = new Controller(app)
     const schemaPath = `${rootPath}/${controllerData.schemas}`
     const schemas = controllerData.schemas
       ? require(path.resolve(schemaPath))
