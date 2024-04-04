@@ -12,7 +12,7 @@ Lightweight DDD folder structure for fastify server with adding services in auto
 .src/app/DOMAIN-NAME/some-service.service.js - some service(interact with database, remote service or so on)
 .src/app/DOMAIN-NAME/mailers/some-mailer-name.js - service which sends emails
 ```
-## Usage (./example)
+## Usage ([./example](./example))
 
 ```js
 // server.js
