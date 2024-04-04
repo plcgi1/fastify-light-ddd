@@ -77,7 +77,7 @@ module.exports = build
 }
 ```
 
-## Howto (see ./example folder)
+## Howto (see [./example](./example))
 
 ### Add new remote method to app
 
