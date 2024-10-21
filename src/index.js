@@ -121,6 +121,10 @@ const createControllers = (app, controllers, rootPath) => {
       if (!schemas[interfaceT.controllerMethod]) {
         schemas[interfaceT.controllerMethod] = {}
       }
+			if (interfaceT.consumes) {
+				schemas[interfaceT.controllerMethod].consumes = interfaceT.consumes
+			}
+
       if (interfaceT.tags) {
         schemas[interfaceT.controllerMethod].tags = [...tags, ...interfaceT.tags]
       } else {

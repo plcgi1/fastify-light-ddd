@@ -1,7 +1,7 @@
 {
   "name": "fastify-light-ddd",
   "description": "Fastify plugin with light DDD approach",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "author": "Aliaksandr <plcgi1@gmail.com>",
   "keywords": ["ddd", "fastify", "fastify-plugin"],
