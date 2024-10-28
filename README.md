@@ -81,10 +81,10 @@ module.exports = build
 
 ### Add new remote method to app
 
-1. Mkdir ./src/app/new-remote-method
-2. Add ./src/app/new-remote-method/descriptor.js
-3. Add ./src/app/new-remote-method/new-remote-method.controller.js
-4. Add ./src/app/new-remote-method/new-remote-method.schema.js
-5. Add ./src/app/new-remote-method/new-remote-method.service.js - optional
-6. Add ./src/app/new-remote-method/new-remote-method/mailers/sendMyEmails.js - optional
+1. Mkdir ./src/app/animals
+2. Add ./src/app/animals/descriptor.js
+3. Add ./src/app/animals/animals.controller.js
+4. Add ./src/app/animals/animals.schema.js
+5. Add ./src/app/animals/animals.service.js - optional
+6. Add ./src/app/animals/animals/mailers/sendMyEmails.js - optional
 7. Restart the server
